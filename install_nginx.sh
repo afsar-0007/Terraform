@@ -1,13 +1,9 @@
 
 #!/bin/bash
 
+ sudo apt-get update -y
 
-apt-get update -y
-
-
-apt-get install nginx -y
-
-
+sudo apt-get install nginx -y
 
 cat > /var/www/html/index.html <<'EOF'
 <!DOCTYPE html>
@@ -29,9 +25,6 @@ cat > /var/www/html/index.html <<'EOF'
 </html>
 EOF
 
-
-
-systemctl enable nginx
-systemctl start nginx
-
+sudo systemctl enable nginx
+sudo systemctl start nginx
 echo "Nginx installation completed!"

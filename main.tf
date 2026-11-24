@@ -1,8 +1,5 @@
-provider "aws" {
-  region = "us-east-1"
 
-}
-modules "ec2_instance" {
+module "ec2_instance" {
   source = "./modules/ec2_instance"
 
   ami_id            = "ami-0c02fb55956c7d316" # Ubuntu Server 20.04 LTS (HVM), SSD Volume Type
